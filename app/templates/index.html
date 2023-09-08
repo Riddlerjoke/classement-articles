@@ -10,10 +10,11 @@
             <button onclick="showAll()" class="btn btn-primary mr-2">Afficher Tous les Articles</button>
             <button onclick="showByAuthors()" class="btn btn-primary mx-2">Recherche par Auteurs</button>
             <button onclick="showByYear()" class="btn btn-primary ml-2">Recherche par Année</button>
+            <button class="btn btn-primary ml-2" onclick="comingSoon()">Ajout d'article</button>
         </div>
 
         {{ author_names }}
-
+        <div id="comingSoonMessage" style="display: none;"><p id="coming-soon-text">Coming Soon 🚀</p></div>
         <div id="filtered-results"></div>
     </main>
 

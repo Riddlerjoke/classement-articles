@@ -136,9 +136,11 @@
                 currentDisplayIndex = 0; // Réinitialiser l'index d'affichage
                 displayResults(); // Afficher les résultats initiaux
             })
+
             .catch(error => {
                 console.error('Erreur lors de la récupération des articles:', error);
             });
+
     }
 
 
@@ -153,6 +155,7 @@ function showByAuthors() {
         .catch(error => {
             console.error('Erreur lors de la récupération des articles par auteurs:', error);
         });
+
 }
 
 
@@ -168,6 +171,7 @@ function showByAuthors() {
             .catch(error => {
                 console.error('Erreur lors de la récupération des articles par année:', error);
             });
+
     }
 function displayYearResults() {
     const resultsDiv = document.getElementById('filtered-results');
@@ -280,3 +284,18 @@ function showMoreYearResults() {
     displayYearResults();
     scrollToTop();
 }
+
+function comingSoon() {
+        // Récupérez la div du message "Coming Soon"
+        const comingSoonMessage = document.getElementById('comingSoonMessage');
+
+        // Affichez la div
+        comingSoonMessage.style.display = 'block';
+
+        // Cachez la div après 3 secondes
+        setTimeout(hideComingSoon, 3000);
+    }
+function hideComingSoon() {
+    const comingSoonText = document.getElementById("coming-soon-text");
+    comingSoonText.style.display = "none";
+    }
